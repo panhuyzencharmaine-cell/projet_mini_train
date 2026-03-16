@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>MiniTrain</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menu">
+    <h1>MiniTrain</h1>
+
+    <div class="menu-box">
+        <label>Nombre de trains :</label>
+        <input type="number" id="trainCount" value="15" min="5" max="50">
+
+        <label>Difficulté :</label>
+        <select id="difficulty">
+            <option value="1">Facile</option>
+            <option value="2">Moyen</option>
+            <option value="3">Difficile</option>
+        </select>
+
+        <button id="startBtn">Démarrer</button>
+    </div>
+</div>
+
+<div id="gameContainer" class="hidden">
+    <div class="ui">
+        <span id="score">Score : 0</span>
+        <span id="remaining"></span>
+    </div>
+    <canvas id="gameCanvas" width="800" height="500"></canvas>
+</div>
+
+<div id="endScreen" class="hidden">
+    <h2>Partie terminée</h2>
+    <p id="finalScore"></p>
+    <button id="restartBtn">Rejouer</button>
+</div>
+
+<script type="module" src="main.js?v=3"></script>
+</body>
+</html>
